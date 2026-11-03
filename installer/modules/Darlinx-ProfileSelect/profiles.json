@@ -1,0 +1,105 @@
+{
+  "profiles": {
+    "base": {
+      "id": "base",
+      "name": "Base System",
+      "description": "Minimal daily driver with KDE Plasma essentials. Required for all other profiles.",
+      "icon": "preferences-system",
+      "packages": ["systemd", "pacman", "plasma-desktop", "firefox", "libreoffice"],
+      "estimated_size_mb": 2500,
+      "required": true,
+      "optional": false
+    },
+    "cad": {
+      "id": "cad",
+      "name": "CAD & 3D Design",
+      "description": "For engineers, designers, and 3D artists. Includes Blender, FreeCAD, KiCad.",
+      "icon": "applications-graphics",
+      "packages": ["blender", "freecad", "kicad", "openscad", "gimp"],
+      "estimated_size_mb": 4500,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": []
+    },
+    "dev": {
+      "id": "dev",
+      "name": "Software Developer",
+      "description": "Full-stack development environment with Docker, VS Code, Git tools.",
+      "icon": "applications-development",
+      "packages": ["git", "docker", "visual-studio-code-bin", "gcc", "clang"],
+      "estimated_size_mb": 3800,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": []
+    },
+    "ai": {
+      "id": "ai",
+      "name": "AI & Machine Learning",
+      "description": "Local AI workloads with PyTorch, TensorFlow, and LLM inference tools.",
+      "icon": "applications-science",
+      "packages": ["cuda", "pytorch", "ollama", "jupyter-lab"],
+      "estimated_size_mb": 6200,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": ["dev"]
+    },
+    "office": {
+      "id": "office",
+      "name": "Office & Business",
+      "description": "Corporate productivity with Office suites, email clients, cloud sync.",
+      "icon": "x-office-document",
+      "packages": ["libreoffice", "thunderbird", "nextcloud-desktop", "remmina"],
+      "estimated_size_mb": 2200,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": []
+    },
+    "gamer": {
+      "id": "gamer",
+      "name": "Gaming Enthusiast",
+      "description": "Steam, Proton, Lutris, and performance optimization tools.",
+      "icon": "applications-game",
+      "packages": ["steam", "proton-ge-custom-bin", "lutris", "gamemode"],
+      "estimated_size_mb": 5100,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": []
+    },
+    "webdev": {
+      "id": "webdev",
+      "name": "Web Developer",
+      "description": "Frontend/backend stacks with Node.js, Docker, web servers.",
+      "icon": "applications-internet",
+      "packages": ["nodejs", "nginx", "postgresql", "docker-compose"],
+      "estimated_size_mb": 3100,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": ["dev"]
+    },
+    "ad": {
+      "id": "ad",
+      "name": "Enterprise Active Directory",
+      "description": "Optional Microsoft AD integration for corporate domains.",
+      "icon": "system-users",
+      "packages": ["realmd", "sssd", "samba", "winbind"],
+      "estimated_size_mb": 1800,
+      "required": false,
+      "optional": true,
+      "conflicts_with": [],
+      "recommends": []
+    }
+  },
+  "configuration": {
+    "allow_multi_profile": true,
+    "require_base_profile": true,
+    "max_selected_profiles": 5,
+    "auto_resolve_conflicts": true,
+    "warn_on_large_selections": 10000
+  }
+}

@@ -1,0 +1,93 @@
+/* Darlinx Calamares Theme - Professional Workstation Style */
+
+/* Global Colors */
+#titleLabel {
+    font: bold 28px "Inter", "Segoe UI", sans-serif;
+    color: #1e3a5f;  /* Deep blue for professional feel */
+}
+
+#profileListContainer {
+    border-radius: 12px;
+    border-color: #c5cae9;
+    background-color: #ffffff;
+}
+
+/* Profile Item Styles */
+ProfileItemDelegate {
+    spacing: 10px;
+}
+
+.ProfileCheckBox {
+    indicator-width: 24px;
+    indicator-height: 24px;
+}
+
+.ProfileCheckbox:checked {
+    color: #3949ab;  /* Darlinx primary blue */
+}
+
+/* Selection State */
+.selectedProfile {
+    background-color: rgba(57, 73, 171, 0.08);
+    border-left: 4px solid #3949ab;
+}
+
+.baseProfile {
+    background-color: rgba(21, 68, 112, 0.08);
+    border-left: 4px solid #154470;
+}
+
+/* Summary Panel */
+#summaryColumn > Rectangle {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+#sizeLabel {
+    font: bold 18px "Inter", sans-serif;
+    color: #059669;  /* Green for size indicator */
+}
+
+/* Warnings & Errors */
+#statusLabel {
+    font-style: italic;
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+/* Progress & Indicators */
+.ProfileProgressBar {
+    bar-background-color: #e2e8f0;
+    bar-fill-color: #3949ab;
+    track-height: 4px;
+}
+
+/* Buttons */
+ToolButton {
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    color: #6b7280;
+}
+
+ToolButton:hover {
+    color: #3949ab;
+}
+
+/* Recommended Badges */
+RecommendedBadge {
+    color: #f59e0b;  /* Amber for recommendations */
+    font-size: 12px;
+    background-color: rgba(245, 158, 11, 0.1);
+    border-radius: 4px;
+    padding: 2px 6px;
+}
+
+/* Warning Box */
+#warningRow > Rectangle {
+    border: 1px solid #fcd34d;
+    background-color: #fffbeb;
+}
